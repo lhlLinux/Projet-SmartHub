@@ -2,18 +2,20 @@
 
 Ce projet démontre l'usage d'une console permettant de communiquer à distance au SmartHub d'une maison intelligente via MQTT. Le projet comporte deux composantes principales: une console (représentant une application sur un dispositif portable) et un SmartHub (représentant une maison intelligente). MongoDB est également utilisé pour stocker les dernières 20 modifications dans un historique.
 
-Pour exécuter le programme il faut rouler deux fichiers séparément,
-chacun dans une console différente. Ces deux fichiers sont
+Librairies utilisées:
+- MQTT
+- MongoDB
+- tkinter
+
+Pour exécuter le programme il faut rouler deux fichiers séparément, chacun dans une console différente. Ces deux fichiers sont
 - main_con.py
 - main_hub.py
 
-Note 1: Pour la fenêtre d'affichage, il est recommendé de la quitter
-via le bouton au bas de la fenêtre, portant ce nom (quitter)
+Note 1: Pour la fenêtre d'affichage, il est recommendé de la quitter via le bouton au bas de la fenêtre, portant ce nom (quitter).
 
 Note 2: Le programme fait usage de la librairie RPiSim
 
-Le autres fichiers constituent le code en son ensemble
-Il y a un fichier par classe. En voici leur description:
+Le autres fichiers constituent le code en son ensemble. Il y a un fichier par classe. En voici leur description:
 
 
 - main_con.py -
@@ -32,25 +34,24 @@ Renferme la classe Cadre, qui est un LabelFrame comportant les deux boutons "ON"
 Renferme la classe Carte, qui est en faite le GPIO
 
 - fenetre.py -
-Renferme la classe Fenetre, qui est une fenetre tkinter de base
+Renferme la classe Fenetre, dérivée d'une fenêtre tkinter de base
 
 - globales.py -
-Fichier global contenant des "constantes" utilisées par plusieurs autres fichiers
+Fichier global contenant des "constantes" communes à plusieurs fichiers
 
 - historique.py -
 Renferme la classe Historique, qui est la fenêtre affichant l'historique des messages
 
 - messagerie.py -
-Renferme la classe Messagerie, qui abstrait la connection avec MQTT et offre des méthodes
-de réception et envoi de messages
+Renferme la classe Messagerie, qui abstrait la connexion à MQTT, offrant des méthodes
+de réception et d'envoi de messages
 
 - panneau.py -
-Renferme le panneau de contrôle (la console), permettant de contrôler à distance les dispositifs de la résidence
+Renferme le panneau de contrôle (la console), permettant de contrôler à distance les objets de la résidence
 
 - smarthub.py -
 Renferme la classe SmartHub, représentant le dispositif intelligent 
-de contrôle de objets dans la résidence
-
+de contrôle des objets de la résidence
 
 
 
