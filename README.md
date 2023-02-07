@@ -19,7 +19,21 @@ Pour exécuter le programme il faut rouler ces deux fichiers, chacun dans sa prop
 
 
 #### Demo
-![Capture d'écran](/demo_smarthub.png "screenshot")
+
+Démarrage:
+![Capture d'écran](/smarthub0.png "screenshot")
+
+Alarme activée:
+![Capture d'écran](/smarthub1.png "screenshot")
+
+Lumière du salon allumée:
+![Capture d'écran](/smarthub2.png "screenshot")
+
+Historique:
+![Capture d'écran](/smarthub3.png "screenshot")
+
+Programme terminé:
+![Capture d'écran](/smarthub4.png "screenshot")
 
 
 #### Liste des fichiers
