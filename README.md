@@ -1,28 +1,34 @@
-## Instructions
+## Description
 
 Ce projet démontre l'usage d'une console permettant de communiquer à distance au SmartHub d'une maison intelligente via MQTT. Le projet comporte deux composantes principales: une console (représentant une application sur un dispositif portable) et un SmartHub (représentant une maison intelligente). MongoDB est également utilisé pour stocker les dernières 20 modifications dans un historique.
 
-Librairies utilisées:
-- MQTT
-- MongoDB
-- tkinter
 
-Pour exécuter le programme il faut rouler deux fichiers séparément, chacun dans une console différente. Ces deux fichiers sont
+#### Librairies utilisées:
+
+- MQTT: pour la communication entre les deux applications
+- MongoDB: pour l'historique
+- tkinter: pour l'interface
+- RPiSim: émulateur du GPIO (l'émulateur peut être substitué par un vrai GPIO lorsque roulé sur un Raspberry Pi)
+
+
+#### Instruction
+
+Pour exécuter le programme il faut rouler ces deux fichiers, chacun dans sa propre console:
 - main_con.py
 - main_hub.py
 
-Note 1: Pour la fenêtre d'affichage, il est recommendé de la quitter via le bouton au bas de la fenêtre, portant ce nom (quitter).
 
-Note 2: Le programme fait usage de la librairie RPiSim
+#### Demo
+![Capture d'écran](/demo_smarthub.png "screenshot")
 
-Le autres fichiers constituent le code en son ensemble. Il y a un fichier par classe. En voici leur description:
 
+#### Liste des fichiers
 
 - main_con.py -
 Fichier pour démarrer la console
 
 - main_hub.py - 
-Fichier pour démarrer le dispositif intelligent smarthub
+Fichier pour démarrer le dispositif intelligent (smarthub)
 
 - basedonnees.py -
 Base de données des messages, renferme la classe BaseDonnees qui abstrait la connection avec la bdd MongoDB, offrant des méthodes d'ajout et de lecture de messages.
